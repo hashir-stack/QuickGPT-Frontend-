@@ -1,4 +1,3 @@
-import React from 'react'
 
 const Credits = () => {
   return (
@@ -6,4 +5,4 @@ const Credits = () => {
   )
 }
 
-export default Credits
+export default Credits;

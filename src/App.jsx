@@ -1,8 +1,23 @@
-import React from 'react'
+import { Route, Routes } from 'react-router-dom';
+import Sidebar from './components/Sidebar';
+import Chatbox from './components/Chatbox';
+import Credits from './pages/Credits';
+import Community from './pages/Community';
 
 const App = () => {
   return (
-    <div className='text-4xl font-bold italic text-red-500'>App</div>
+    <>
+      <div className='dark:bg-linear-to-b from-[#242124] to-[#000000] dark:text-white'>
+        <div className='w-screen h-screen flex'>
+          <Sidebar/>
+          <Routes>
+            <Route path='/' element={<Chatbox/>}/>
+            <Route path='/credits' element={<Credits/>}/>
+            <Route path='/community' element={<Community/>}/>
+          </Routes>
+        </div>
+      </div>
+    </>
   )
 }
 

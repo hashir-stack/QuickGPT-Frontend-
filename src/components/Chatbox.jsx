@@ -1,4 +1,3 @@
-import React from 'react'
 
 const Chatbox = () => {
   return (
@@ -6,4 +5,4 @@ const Chatbox = () => {
   )
 }
 
-export default Chatbox
+export default Chatbox;
