@@ -283,46 +283,46 @@ export const dummyChats = [
 export const dummyPublishedImages = [
     {
         "imageUrl": ai_image11,
-        "userName": "GreatStack"
+        "userName": " Mohd.Hashir Hayat "
     },
     {
         "imageUrl": ai_image10,
-        "userName": "GreatStack"
+        "userName": "Mohd.Hashir Hayat"
     },
     {
         "imageUrl": ai_image9,
-        "userName": "GreatStack"
+        "userName": "Mohd.Hashir Hayat"
     },
     {
         "imageUrl": ai_image8,
-        "userName": "GreatStack"
+        "userName": "Mohd.Hashir Hayat"
     },
     {
         "imageUrl": ai_image7,
-        "userName": "GreatStack"
+        "userName": "Mohd.Hashir Hayat"
     },
     {
         "imageUrl": ai_image6,
-        "userName": "GreatStack"
+        "userName": "Mohd.Hashir Hayat"
     },
     {
         "imageUrl": ai_image5,
-        "userName": "GreatStack"
+        "userName": "Mohd.Hashir Hayat"
     },
     {
         "imageUrl": ai_image4,
-        "userName": "GreatStack"
+        "userName": "Mohd.Hashir Hayat"
     },
     {
         "imageUrl": ai_image3,
-        "userName": "GreatStack"
+        "userName": "Mohd.Hashir Hayat"
     },
     {
         "imageUrl": ai_image2,
-        "userName": "GreatStack"
+        "userName": "Mohd.Hashir Hayat"
     },
     {
         "imageUrl": ai_image1,
-        "userName": "GreatStack"
+        "userName": "Mohd.Hashir Hayat"
     }
 ]
