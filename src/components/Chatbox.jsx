@@ -24,6 +24,7 @@ const Chatbox = () => {
     }
   },[selectedChat])
 
+  // scroll to very new messages
   useEffect(()=>{
     if(containerRef.current){
       containerRef.current.scrollTo({
