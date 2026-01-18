@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useAppContext } from "../context/AppContext";
 
 const Login = () => {
   const [state, setState] = useState("login");
@@ -6,8 +7,24 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const { axios , setToken } = useAppContext();
+  
+
   const handleFormSubmit = async (e) =>{
     e.preventDefault();
+    const url = state === "login" ? '/api/user/login' : '/api/user/register' ;
+
+    try {
+      const {data} = await axios.post(url , {name , email , password});
+      if(data.success){
+        setToken(data.token);
+        localStorage.setItem('token', data.token)
+      }else{
+        toast.error(data.message)
+      }
+    } catch (error) {
+      toast.error(error.message);
+    }
   }
 
   return (
