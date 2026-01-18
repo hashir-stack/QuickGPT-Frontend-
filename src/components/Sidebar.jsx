@@ -5,7 +5,7 @@ import moment from "moment";
 import toast from "react-hot-toast";
 
 const Sidebar = ({ isMenuOpen, setIsMenuOpen }) => {
-  const { chats, setSelectedChat, theme, setTheme, user, navigate , createNewChat , axios , setChats , fetchUsersChats , setToken } = useAppContext();
+  const { chats, setSelectedChat, theme, setTheme, user, navigate , createNewChat , axios , setChats , fetchUserChats , setToken ,token } = useAppContext();
 
   const [search, setSearch] = useState("");
 
@@ -13,6 +13,23 @@ const Sidebar = ({ isMenuOpen, setIsMenuOpen }) => {
     localStorage.removeItem('token');
     setToken(null);
     toast.success(" Logged Out Successfully ... ")
+  }
+
+  const deleteChat = async (e ,chatId) =>{
+    try {
+      e.stopPropagation();
+      const confirm = window.confirm('Are You Sure You Want To Delete This Chat ?');
+      if(!confirm) return;
+
+      const {data} = await axios.post('/api/chat/delete',{chatId},{headers: { Authorization: token} });
+      if(data.success){
+        setChats((prev)=>prev.filter(chat => chat._id !== chatId));
+        await fetchUserChats();
+        toast.success(data.message)
+      }
+    } catch (error) {
+      toast.error(error.message);
+    }
   }
 
   return (
@@ -38,6 +55,7 @@ const Sidebar = ({ isMenuOpen, setIsMenuOpen }) => {
 
       {/* New Chat button */}
       <button
+        onClick={createNewChat}
         className="
           flex justify-center items-center w-full 
           py-2 mt-6 sm:mt-10 
@@ -105,6 +123,7 @@ const Sidebar = ({ isMenuOpen, setIsMenuOpen }) => {
                 </p>
               </div>
               <img
+                onClick={e=>toast.promise(deleteChat(e,chat._id),{loading:'Deleting...'})}
                 src={assets.bin_icon}
                 alt="Delete"
                 className="hidden group-hover:block w-4 cursor-pointer not-dark:invert"
