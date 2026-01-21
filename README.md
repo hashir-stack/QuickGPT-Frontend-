@@ -1,16 +1,59 @@
-# React + Vite
+# QuickGPT Frontend 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+QuickGPT Frontend is the React-based interface for the **QuickGPT** application — a MERN stack project where users can generate **AI-powered text and images** through an interactive chatbot.  
+👉 Live Demo: [quick-gpt-byhashir.vercel.app](https://quick-gpt-byhashir.vercel.app/)
 
-Currently, two official plugins are available:
+## ✨ Features
+- 🤖 **AI Chatbot**: Generate text responses powered by GPT.
+- 🎨 **Image Generation**: Create AI-driven images directly from prompts.
+- 🔐 **Authentication**: Secure login/logout flow.
+- 📱 **Responsive UI**: Built with modern design principles for cross-device compatibility.
+- ⚡ **Fast Development**: Powered by **Vite** for blazing-fast builds and HMR.
+- 🌐 **Deployment Ready**: Configured with `vercel.json` for seamless hosting.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
+- **Frontend Framework**: React (with Vite)
+- **Styling**: CSS + Tailwind 
+- **Linting**: ESLint configuration included
+- **Deployment**: Vercel
+- **Backend (separate repo)**: Node.js, Express, MongoDB
 
-## React Compiler
+## 📂 Project Structure
+QuickGPT-Frontend- ├── public/              # Static assets ├── src/                 # React components, contexts, and pages ├── index.html           # Entry HTML file ├── package.json         # Dependencies & scripts ├── vite.config.js       # Vite configuration ├── vercel.json          # Deployment config └── README.md            # Documentatio
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Getting Started
 
-## Expanding the ESLint configuration
+### Prerequisites
+- Node.js (>= 16.x)
+- npm or yarn
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Installation
+```bash
+# Clone the repo
+git clone https://github.com/hashir-stack/QuickGPT-Frontend-.git
+
+# Navigate into the project
+cd QuickGPT-Frontend-
+
+# Install dependencies
+npm install
+
+Running Locally
+npm run dev
+
+
+🤝 Contributing
+Contributions are welcome!
+- Fork the repo
+- Create a new branch (feature/your-feature)
+- Commit changes
+- Open a Pull Request
+
+📜 License
+This project is licensed under the MIT License.
+
+👨‍💻 Author
+Developed by Mohd.Hashir Hayat Ansari
+GitHub: hashir-stack (github.com in Bing)
+
+
